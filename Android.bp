@@ -1,0 +1,10 @@
+filegroup {
+    name: "debian.mime.types",
+    visibility: [
+        "//visibility:public",
+    ],
+    path: "",
+    srcs: [
+        "mime.types",
+    ],
+}
