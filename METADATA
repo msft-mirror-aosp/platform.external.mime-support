@@ -9,9 +9,9 @@ third_party {
   }
   url {
     type: GIT
-    value: "https://salsa.debian.org/debian/mime-support/blob/debian/3.61/mime.types"
+    value: "https://salsa.debian.org/debian/mime-support/blob/debian/3.63/mime.types"
   }
-  version: "Debian/3.61"
-  last_upgrade_date { year: 2018 month: 8 day: 20 }
+  version: "Debian/3.63"
+  last_upgrade_date { year: 2019 month: 10 day: 3 }
   license_type: UNENCUMBERED
 }
