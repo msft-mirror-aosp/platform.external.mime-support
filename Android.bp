@@ -1,10 +1,12 @@
-filegroup {
-    name: "debian.mime.types",
+java_genrule {
+    name: "debian.mime.types.minimized",
     visibility: [
         "//visibility:public",
     ],
-    path: "",
+    out: ["debian.mime.types"],
     srcs: [
         "mime.types",
     ],
+    //    strip comments            normalize whitepace       drop empty lines
+    cmd: "awk '{gsub(/#.*$$/,\"\"); $$1=$$1; print;}' $(in) | grep ' ' > $(out)",
 }
