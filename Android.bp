@@ -27,3 +27,16 @@ java_genrule {
     //    strip comments            normalize whitepace       drop empty lines
     cmd: "awk '{gsub(/#.*$$/,\"\"); $$1=$$1; print;}' $(in) | grep ' ' > $(out)",
 }
+
+java_genrule {
+    name: "debian.mime.types.minimized-alt",
+    visibility: [
+        "//visibility:public",
+    ],
+    out: ["debian.mime.types"],
+    srcs: [
+        "mime.types-alt",
+    ],
+    //    strip comments            normalize whitepace       drop empty lines
+    cmd: "awk '{gsub(/#.*$$/,\"\"); $$1=$$1; print;}' $(in) | grep ' ' > $(out)",
+}
